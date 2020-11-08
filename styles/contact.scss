@@ -53,6 +53,16 @@ $baseGreen: #0CC965;
             width: 50%;
         }
     }
+    .empty{
+        display: none;
+    }
+    .info-container{
+        flex-flow: column wrap!important;
+    }
+    form{
+        padding: 10px!important;
+        margin: 0!important;
+    }
 }
 
 @media(min-width: 768px){
@@ -72,10 +82,10 @@ $baseGreen: #0CC965;
     }
 }
 @media(min-width: 1400px){
-    .appliwrap{
-        background: url("/media/appli.svg") no-repeat right fixed;
-        background-size: contain;
-    } 
+    // .appliwrap{
+    //     background: url("/media/contact.jpg") no-repeat right fixed;
+    //     background-size: contain;
+    // } 
 }
 //! MEDIA QUERY=====================END
 
@@ -161,7 +171,7 @@ $baseGreen: #0CC965;
             height: 90%;
             width: 90%;
             margin: auto;
-            background: url("/media/careerSnip.PNG") no-repeat center;
+            background: url("/media/contactCapture.png") no-repeat center;
             background-size: contain;
         }
     }
@@ -190,12 +200,13 @@ $baseGreen: #0CC965;
 
 // !H ===Hero Section
 .hero-container{
-    height: 70vh;
+    height: 50vh;
     align-items: center;
     .innerSection{
         display: flex;
         flex-flow: column wrap;
         align-items: center;
+        flex-grow: 1;
         h1{
             font-family: $poppins;
             font-weight: bolder;
@@ -219,7 +230,12 @@ $baseGreen: #0CC965;
     min-height: 85vh;
     align-items: center;
     .innerSection{
+        flex-grow: 1;
         form{
+            box-shadow: 2px 4px 5px 3px #DBDBDB;
+            padding: 50px;
+            border-radius: 5px;
+            margin-bottom: 50px;
             h2{
                 font-family: $limeLight;
                 font-size: 1.5em;
@@ -239,7 +255,7 @@ $baseGreen: #0CC965;
                 margin: 5px 0px;
                 padding: 9px;
                 border: 1px solid rgb(194, 194, 194);
-                border-radius: 60px;
+                border-radius: 5px;
                 outline: none;
                 transition: all 800ms;
                 &:focus{
@@ -263,27 +279,44 @@ $baseGreen: #0CC965;
                 background-color: $baseGreen;
                 color: white;
                 font-size: 1.1em;
-                border-radius: 15px 1px 15px 1px;
+                border-radius: 4px;
             }
         }
     }
+    .empty{ flex-grow: 2!important;}
 }
 
 //  ! ===== Contact section
 .contactC{
     display: flex;
-    min-height: 50vh;
+    min-height: 40vh;
     align-items: center;
     justify-content: center;
     flex-flow: column wrap;
+    .innerSection{
+        flex-grow: 1;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 2px 4px 5px 3px #DBDBDB;
+        display: block;
+        text-align: center;
+        padding: 20px 10px !important;
+        margin: 10px!important;
+        h4{
+            font-family: $poppins;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        p{
+            font-family: $poppins;
+            font-size: 16px;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+    }
 }
-#contactUs{
-    text-align: center;
-    font-family: $poppins;
-    font-weight: bolder;
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
+
+
 .info-container{
     justify-content: center;
     .innerSection{
@@ -297,6 +330,14 @@ $baseGreen: #0CC965;
     }
 }
 
+// ! Contact
+#contactForm{
+    display: flex;
+    #message{
+        border-radius: 4px;
+        height: 200px;
+    }
+}
 
 // !=============Footer ===
 footer{
@@ -316,11 +357,3 @@ footer{
 }
 
 
-// !For Contact Page
-#contactForm{
-    display: flex;
-    #message{
-        border-radius: 4px;
-        height: 200px;
-    }
-}

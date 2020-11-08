@@ -42,6 +42,19 @@
   form #cv {
     width: 50%;
   }
+  .empty {
+    display: none;
+  }
+  .info-container {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-flow: column wrap !important;
+            flex-flow: column wrap !important;
+  }
+  form {
+    padding: 10px !important;
+    margin: 0 !important;
+  }
 }
 
 @media (min-width: 768px) {
@@ -53,13 +66,6 @@
 @media (min-width: 1024px) {
   .container-wrapper [class*="container"] {
     width: 70%;
-  }
-}
-
-@media (min-width: 1400px) {
-  .appliwrap {
-    background: url("/media/appli.svg") no-repeat right fixed;
-    background-size: contain;
   }
 }
 
@@ -183,7 +189,7 @@
   height: 90%;
   width: 90%;
   margin: auto;
-  background: url("/media/careerSnip.PNG") no-repeat center;
+  background: url("/media/contactCapture.png") no-repeat center;
   background-size: contain;
 }
 
@@ -216,7 +222,7 @@
 }
 
 .hero-container {
-  height: 70vh;
+  height: 50vh;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -233,6 +239,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .hero-container .innerSection h1 {
@@ -258,6 +267,20 @@
           align-items: center;
 }
 
+.appl-container .innerSection {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.appl-container .innerSection form {
+  -webkit-box-shadow: 2px 4px 5px 3px #DBDBDB;
+          box-shadow: 2px 4px 5px 3px #DBDBDB;
+  padding: 50px;
+  border-radius: 5px;
+  margin-bottom: 50px;
+}
+
 .appl-container .innerSection form h2 {
   font-family: "Limelight";
   font-size: 1.5em;
@@ -279,7 +302,7 @@
   margin: 5px 0px;
   padding: 9px;
   border: 1px solid #c2c2c2;
-  border-radius: 60px;
+  border-radius: 5px;
   outline: none;
   -webkit-transition: all 800ms;
   transition: all 800ms;
@@ -309,14 +332,20 @@
   background-color: #0CC965;
   color: white;
   font-size: 1.1em;
-  border-radius: 15px 1px 15px 1px;
+  border-radius: 4px;
+}
+
+.appl-container .empty {
+  -webkit-box-flex: 2 !important;
+      -ms-flex-positive: 2 !important;
+          flex-grow: 2 !important;
 }
 
 .contactC {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 50vh;
+  min-height: 40vh;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -329,12 +358,31 @@
           flex-flow: column wrap;
 }
 
-#contactUs {
+.contactC .innerSection {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background-color: white;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 4px 5px 3px #DBDBDB;
+          box-shadow: 2px 4px 5px 3px #DBDBDB;
+  display: block;
   text-align: center;
+  padding: 20px 10px !important;
+  margin: 10px !important;
+}
+
+.contactC .innerSection h4 {
   font-family: "Poppins";
-  font-weight: bolder;
-  font-size: 1.2em;
-  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.contactC .innerSection p {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 10px;
 }
 
 .info-container {
@@ -356,6 +404,17 @@
           transform: translateY(-5px);
 }
 
+#contactForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#contactForm #message {
+  border-radius: 4px;
+  height: 200px;
+}
+
 footer {
   background-color: #161822;
 }
@@ -372,15 +431,4 @@ footer section a {
   font-family: "Poppins";
   font-size: 13px;
 }
-
-#contactForm {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-#contactForm #message {
-  border-radius: 4px;
-  height: 200px;
-}
-/*# sourceMappingURL=career.css.map */
+/*# sourceMappingURL=contact.css.map */
